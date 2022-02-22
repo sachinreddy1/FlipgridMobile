@@ -3,11 +3,11 @@ package com.sachinreddy.flipgridmobile.viewmodel
 import androidx.lifecycle.ViewModel
 
 class MainViewModel: ViewModel() {
-    val firstName: String? = null
+    var firstName: String? = null
 
-    val emailAddress: String? = null
+    var emailAddress: String? = null
 
-    val password: String? = null
+    var password: String? = null
 
-    val website: String? = null
+    var website: String? = null
 }

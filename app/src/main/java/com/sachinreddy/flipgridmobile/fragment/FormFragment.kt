@@ -1,6 +1,8 @@
 package com.sachinreddy.flipgridmobile.fragment
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,9 +26,7 @@ class FormFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-
         _binding = FragmentFormBinding.inflate(inflater, container, false)
-
         return _binding?.root
     }
 
@@ -43,6 +43,32 @@ class FormFragment : Fragment() {
             }
         }
 
+        _binding?.apply {
+            firstName.addTextChangedListener(FormTextChangedListener(R.id.firstName))
+            emailAddress.addTextChangedListener(FormTextChangedListener(R.id.emailAddress))
+            password.addTextChangedListener(FormTextChangedListener(R.id.password))
+            website.addTextChangedListener(FormTextChangedListener(R.id.website))
+        }
+
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    inner class FormTextChangedListener(val viewId: Int): TextWatcher {
+        override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+        }
+
+        override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            mainViewModel.apply {
+                when (viewId) {
+                    R.id.firstName -> firstName = p0.toString()
+                    R.id.emailAddress -> emailAddress = p0.toString()
+                    R.id.password -> password = p0.toString()
+                    R.id.website -> website = p0.toString()
+                }
+            }
+        }
+
+        override fun afterTextChanged(p0: Editable?) {
+        }
     }
 }
