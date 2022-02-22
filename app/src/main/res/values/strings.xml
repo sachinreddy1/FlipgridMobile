@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">FlipgridMobile</string>
+    <string name="form_title">Profile Creation</string>
+    <string name="form_description">Use the form below to submit your portfolio. An email and password are required.</string>
+    <string name="first_name">First Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="website">Website</string>
+    <string name="submit">Submit</string>
 </resources>
