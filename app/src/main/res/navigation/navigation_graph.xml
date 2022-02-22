@@ -2,22 +2,22 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/fragment1"
+    app:startDestination="@id/fragmentForm"
     >
 
     <fragment
-        android:id="@+id/fragment1"
+        android:id="@+id/fragmentForm"
         android:name="com.sachinreddy.flipgridmobile.fragment.FormFragment"
-        android:label="Fragment1">
+        android:label="FormFragment">
         <action
-            android:id="@+id/action_fragment1_to_fragment2"
-            app:destination="@id/fragment2" />
+            android:id="@+id/action_fragmentForm_to_fragmentSubmit"
+            app:destination="@id/fragmentSubmit" />
     </fragment>
 
     <fragment
-        android:id="@+id/fragment2"
+        android:id="@+id/fragmentSubmit"
         android:name="com.sachinreddy.flipgridmobile.fragment.SubmitFragment"
-        android:label="Fragment2">
+        android:label="SubmitFragment">
     </fragment>
 
 </navigation>

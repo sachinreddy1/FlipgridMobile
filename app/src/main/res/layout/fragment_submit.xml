@@ -78,7 +78,7 @@
 
         android:layout_margin="20dp"
 
-        android:text="@string/submit"
+        android:text="@string/sign_in"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
