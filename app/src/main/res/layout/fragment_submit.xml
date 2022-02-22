@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/submitTitle"
@@ -23,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
 
-        android:text="@string/form_description"
+        android:text="@string/submit_description"
         android:textSize="20sp"
 
         app:layout_constraintStart_toStartOf="parent"
@@ -33,24 +34,11 @@
         />
 
     <TextView
-        android:id="@+id/firstName"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:hint="@string/first_name"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline1"
-        app:layout_constraintBottom_toTopOf="@id/guideline2"
-        />
-
-    <TextView
         android:id="@+id/emailAddress"
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:hint="@string/email_address"
+        tools:text="abc.com"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,11 +47,24 @@
         />
 
     <TextView
-        android:id="@+id/password"
+        android:id="@+id/firstName"
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:hint="@string/password"
+        tools:text="Aubrey"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline1"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        />
+
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        tools:text="aubreyplaza.com"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +73,7 @@
         />
 
     <Button
-        android:id="@+id/buttonSubmit"
+        android:id="@+id/buttonSignIn"
         android:layout_width="0dp"
         android:layout_height="0dp"
 

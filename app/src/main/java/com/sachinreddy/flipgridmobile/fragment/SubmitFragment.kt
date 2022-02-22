@@ -24,4 +24,14 @@ class SubmitFragment: Fragment() {
         return _binding?.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        _binding?.apply {
+            emailAddress.text = "mainViewModel.emailAddress"
+            firstName.text = "mainViewModel.firstName"
+            website.text = "mainViewModel.website"
+        }
+
+        super.onViewCreated(view, savedInstanceState)
+    }
+
 }

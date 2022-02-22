@@ -8,4 +8,5 @@
     <string name="website">Website</string>
     <string name="submit">Submit</string>
     <string name="sign_in">Sign in</string>
+    <string name="submit_description">Your super-awesome portfolio has been successfully submitted! The details below will be public within your community!</string>
 </resources>
