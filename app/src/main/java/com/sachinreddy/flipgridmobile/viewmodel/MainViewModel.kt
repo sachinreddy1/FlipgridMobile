@@ -1,13 +1,14 @@
 package com.sachinreddy.flipgridmobile.viewmodel
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel: ViewModel() {
-    var firstName: String? = null
+    var firstName = MutableLiveData("")
 
-    var emailAddress: String? = null
+    var emailAddress = MutableLiveData("")
 
-    var password: String? = null
+    var password = MutableLiveData("")
 
-    var website: String? = null
+    var website = MutableLiveData("")
 }

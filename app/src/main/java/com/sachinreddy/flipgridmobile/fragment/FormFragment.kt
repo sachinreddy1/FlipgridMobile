@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.sachinreddy.flipgridmobile.R
@@ -18,14 +18,13 @@ import com.sachinreddy.flipgridmobile.viewmodel.MainViewModel
 class FormFragment : Fragment() {
     private var _binding: FragmentFormBinding? = null
     private lateinit var navController: NavController
-    private lateinit var mainViewModel: MainViewModel
+    private val mainViewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         _binding = FragmentFormBinding.inflate(inflater, container, false)
         return _binding?.root
     }
@@ -35,7 +34,7 @@ class FormFragment : Fragment() {
 
         _binding?.buttonSubmit?.setOnClickListener {
             mainViewModel.apply {
-                if (firstName.isNullOrBlank() || emailAddress.isNullOrBlank() || password.isNullOrBlank() || website.isNullOrBlank()) {
+                if (firstName.value!!.isBlank() || emailAddress.value!!.isBlank() || password.value!!.isBlank() || website.value!!.isBlank()) {
                     Toast.makeText(context, "Please fill all fields.", Toast.LENGTH_SHORT).show()
                 } else {
                     navController.navigate(R.id.action_fragmentForm_to_fragmentSubmit)
@@ -60,10 +59,10 @@ class FormFragment : Fragment() {
         override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             mainViewModel.apply {
                 when (viewId) {
-                    R.id.firstName -> firstName = p0.toString()
-                    R.id.emailAddress -> emailAddress = p0.toString()
-                    R.id.password -> password = p0.toString()
-                    R.id.website -> website = p0.toString()
+                    R.id.firstName -> firstName.postValue(p0.toString())
+                    R.id.emailAddress -> emailAddress.postValue(p0.toString())
+                    R.id.password -> password.postValue(p0.toString())
+                    R.id.website -> website.postValue(p0.toString())
                 }
             }
         }

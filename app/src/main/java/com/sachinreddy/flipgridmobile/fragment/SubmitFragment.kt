@@ -5,33 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
 import com.sachinreddy.flipgridmobile.databinding.FragmentSubmitBinding
 import com.sachinreddy.flipgridmobile.viewmodel.MainViewModel
 
 class SubmitFragment: Fragment() {
-
-    private var _binding: FragmentSubmitBinding? = null
-    private lateinit var mainViewModel: MainViewModel
+    private val mainViewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        _binding = FragmentSubmitBinding.inflate(inflater, container, false)
-        return _binding?.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        _binding?.apply {
-            emailAddress.text = "mainViewModel.emailAddress"
-            firstName.text = "mainViewModel.firstName"
-            website.text = "mainViewModel.website"
+    ): View {
+        FragmentSubmitBinding.inflate(inflater, container, false).apply {
+            vm = mainViewModel
+            return root
         }
-
-        super.onViewCreated(view, savedInstanceState)
     }
-
 }
