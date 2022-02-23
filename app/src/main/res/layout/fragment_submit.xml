@@ -84,7 +84,7 @@
             android:layout_height="0dp"
 
             tools:text="bilbobagins.com"
-            android:text="@{vm.emailAddress}"
+            android:text="@{vm.website}"
 
             android:autoLink="web"
             android:linksClickable="true"

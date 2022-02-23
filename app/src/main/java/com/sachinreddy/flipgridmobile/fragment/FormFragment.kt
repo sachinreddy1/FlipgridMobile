@@ -41,7 +41,7 @@ class FormFragment : Fragment() {
     }
 
     private fun navigateNext() {
-        if (mainViewModel.checkAllField()) {
+        if (mainViewModel.checkRequiredField()) {
             Toast.makeText(context, "Please fill all fields.", Toast.LENGTH_SHORT).show()
         } else {
             navController.navigate(R.id.action_fragmentForm_to_fragmentSubmit)

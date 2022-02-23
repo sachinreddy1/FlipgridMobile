@@ -9,7 +9,7 @@ class MainViewModel : ViewModel() {
     var password = MutableLiveData("")
     var website = MutableLiveData("")
 
-    fun checkAllField(): Boolean {
-        return firstName.value!!.isBlank() || emailAddress.value!!.isBlank() || password.value!!.isBlank() || website.value!!.isBlank()
+    fun checkRequiredField(): Boolean {
+        return emailAddress.value!!.isBlank() || password.value!!.isBlank()
     }
 }
