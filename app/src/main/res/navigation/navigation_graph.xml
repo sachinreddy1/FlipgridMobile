@@ -11,13 +11,16 @@
         android:label="FormFragment">
         <action
             android:id="@+id/action_fragmentForm_to_fragmentSubmit"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
             app:destination="@id/fragmentSubmit" />
     </fragment>
 
     <fragment
         android:id="@+id/fragmentSubmit"
         android:name="com.sachinreddy.flipgridmobile.fragment.SubmitFragment"
-        android:label="SubmitFragment">
+        android:label="SubmitFragment"
+        >
     </fragment>
 
 </navigation>
