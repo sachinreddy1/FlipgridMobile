@@ -18,6 +18,7 @@ class SubmitFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         FragmentSubmitBinding.inflate(inflater, container, false).apply {
+            lifecycleOwner = this@SubmitFragment
             vm = mainViewModel
             return root
         }

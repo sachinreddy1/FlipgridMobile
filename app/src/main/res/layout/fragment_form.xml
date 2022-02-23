@@ -1,167 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/formTitle"
+    <data>
+        <variable
+            name="vm"
+            type="com.sachinreddy.flipgridmobile.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent">
 
-        android:text="@string/form_title"
-        android:textSize="40sp"
+        <TextView
+            android:id="@+id/formTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/guideline0"
-        />
+            android:text="@string/form_title"
+            android:textSize="40sp"
 
-    <TextView
-        android:id="@+id/formDescription"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        android:text="@string/form_description"
-        android:textSize="20sp"
+        <TextView
+            android:id="@+id/formDescription"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline0"
-        app:layout_constraintBottom_toBottomOf="@id/guideline1"
-        />
+            android:text="@string/form_description"
+            android:textSize="20sp"
 
-    <EditText
-        android:id="@+id/firstName"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline0" />
 
-        android:hint="@string/first_name"
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline1"
-        app:layout_constraintBottom_toTopOf="@id/guideline2"
-        />
+            android:hint="@string/first_name"
 
-    <EditText
-        android:id="@+id/emailAddress"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+            android:vm="@{vm}"
+            android:viewId="@{0}"
 
-        android:hint="@string/email_address"
+            app:layout_constraintBottom_toTopOf="@id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline1" />
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline2"
-        app:layout_constraintBottom_toTopOf="@id/guideline3"
-        />
+        <EditText
+            android:id="@+id/emailAddress"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+            android:hint="@string/email_address"
 
-        android:hint="@string/password"
+            android:vm="@{vm}"
+            android:viewId="@{1}"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline3"
-        app:layout_constraintBottom_toTopOf="@id/guideline4"
-        />
+            app:layout_constraintBottom_toTopOf="@id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline2" />
 
-    <EditText
-        android:id="@+id/website"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
 
-        android:hint="@string/website"
+            android:hint="@string/password"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline4"
-        app:layout_constraintBottom_toTopOf="@id/guideline5"
-        />
+            android:vm="@{vm}"
+            android:viewId="@{2}"
 
-    <Button
-        android:id="@+id/buttonSubmit"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline3" />
 
-        android:layout_margin="20dp"
+        <EditText
+            android:id="@+id/website"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
 
-        android:text="@string/submit"
+            android:hint="@string/website"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline6"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+            android:vm="@{vm}"
+            android:viewId="@{3}"
 
-    <!--  Guidelines  -->
+            app:layout_constraintBottom_toTopOf="@id/guideline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline4" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
 
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.12"
-        />
+            android:layout_margin="20dp"
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            android:text="@string/submit"
 
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22"
-        />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline6" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        <!--  Guidelines  -->
 
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.32"
-        />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.12" />
 
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.42"
-        />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.22" />
 
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.52"
-        />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.32" />
 
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.62"
-        />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.42" />
 
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85"
-        />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.52" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.62" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
