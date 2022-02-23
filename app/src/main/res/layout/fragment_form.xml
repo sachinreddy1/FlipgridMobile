@@ -18,6 +18,8 @@
             android:layout_height="0dp"
 
             android:text="@string/form_title"
+
+            style="@style/Base.Widget.AppCompat.TextView.Style"
             android:textSize="40sp"
 
             app:layout_constraintBottom_toBottomOf="@id/guideline0"
@@ -31,7 +33,9 @@
             android:layout_height="0dp"
 
             android:text="@string/form_description"
-            android:textSize="20sp"
+
+            style="@style/Base.Widget.AppCompat.TextView.Style"
+            android:textSize="16sp"
 
             app:layout_constraintBottom_toBottomOf="@id/guideline1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,6 +52,8 @@
             android:vm="@{vm}"
             android:viewId="@{0}"
 
+            style="@style/Base.Widget.AppCompat.EditText.Style"
+
             app:layout_constraintBottom_toTopOf="@id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,6 +68,8 @@
 
             android:vm="@{vm}"
             android:viewId="@{1}"
+
+            style="@style/Base.Widget.AppCompat.EditText.Style"
 
             app:layout_constraintBottom_toTopOf="@id/guideline3"
             app:layout_constraintEnd_toEndOf="parent"
@@ -78,6 +86,8 @@
             android:vm="@{vm}"
             android:viewId="@{2}"
 
+            style="@style/Base.Widget.AppCompat.EditText.Style"
+
             app:layout_constraintBottom_toTopOf="@id/guideline4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -93,6 +103,8 @@
             android:vm="@{vm}"
             android:viewId="@{3}"
 
+            style="@style/Base.Widget.AppCompat.EditText.Style"
+
             app:layout_constraintBottom_toTopOf="@id/guideline5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -106,6 +118,8 @@
             android:layout_margin="20dp"
 
             android:text="@string/submit"
+
+            style="@style/Base.Widget.AppCompat.Button.Style"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -3,10 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/reddy/Documents/Projects/FlipgridMobile/app/src/main/res/drawable-v24/round_background.xml" value="0.272" />
         <entry key="..\:/Users/reddy/Documents/Projects/FlipgridMobile/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/reddy/Documents/Projects/FlipgridMobile/app/src/main/res/layout/fragment_first.xml" value="0.18541666666666667" />
-        <entry key="..\:/Users/reddy/Documents/Projects/FlipgridMobile/app/src/main/res/layout/fragment_form.xml" value="0.2" />
-        <entry key="..\:/Users/reddy/Documents/Projects/FlipgridMobile/app/src/main/res/layout/fragment_submit.xml" value="0.18541666666666667" />
+        <entry key="..\:/Users/reddy/Documents/Projects/FlipgridMobile/app/src/main/res/layout/fragment_form.xml" value="0.4" />
+        <entry key="..\:/Users/reddy/Documents/Projects/FlipgridMobile/app/src/main/res/layout/fragment_submit.xml" value="0.264" />
       </map>
     </option>
   </component>
